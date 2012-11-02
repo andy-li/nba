@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+#pageContainer {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;    
+}
+
+div[data-role="header"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+}
+
+div[data-role="content"] {
+    position: absolute;
+    top: 41px;
+    bottom: 65px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+div[data-role="footer"] {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1020;    
+}
+
+li[data-role="list-divider"] a {
+    text-decoration: none;
+    color: #2373A5;
+}
+
+.ui-page {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Chrome and Safari */
+    -moz-backface-visibility: hidden; /* Firefox */  
+}
+.scrollable {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.main-footer .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+.main-footer .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+#navbar-home .ui-icon {background:  url(images/glyphish/home.png) 50% 50% no-repeat; background-size: 22px 22px; }
+#navbar-team .ui-icon {background:  url(images/glyphish/team.png) 50% 50% no-repeat; background-size: 29px 18px; }
+#navbar-star .ui-icon {background:  url(images/glyphish/star.png) 50% 50% no-repeat; background-size: 26px 26px; }
+#navbar-user .ui-icon {background:  url(images/glyphish/user.png) 50% 50% no-repeat; background-size: 24px 21px; }
+#navbar-gear .ui-icon {background:  url(images/glyphish/gear.png) 50% 50% no-repeat; background-size: 26px 26px; }
+
+.teamlist div,
+.teamlist div p{
+    text-align: center;
+}
+.teamlist div p img {
+    width: 80px;
+    height: 80px;
+}

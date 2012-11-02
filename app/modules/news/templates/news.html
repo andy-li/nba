@@ -1,0 +1,22 @@
+<!-- modules/news/templates/news.html -->
+
+<div data-role="header" data-position="fixed" data-theme="b" data-fullscreen="true">
+	<a id="btnBack" data-icon="arrow-l" data-iconpos="notext">返回</a>
+	<h1>新闻正文</h1>
+</div>     
+<div data-role="content">
+	<div class="newsview-content ui-body">
+	</div>
+</div>
+<!--
+<div data-role="footer" data-position="fixed" data-fullscreen="true">
+	<h1>Fixed Footer!</h1>
+</div>
+-->
+<script type="text/x-jquery-tmpl" id="appNewsTpl">    
+    <h3>${News.Title}</h3>
+    <h5>来源: ${News.Source}</h5>
+    <div>
+        {{html News.Content}}
+    </div>    
+</script>

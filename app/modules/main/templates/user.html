@@ -1,0 +1,23 @@
+<!-- modules/main/templates/user.html -->
+<div class="userview-content">
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<h1>我</h1>
+	</div>
+
+	<div data-role="content">
+		<ul data-role="listview" class="userview-listview" data-inset="true" data-theme="d" data-divider-theme="c" data-split-icon="minus" data-split-theme="d">
+			<li data-role="list-divider">关注的球队</li>						
+		</ul>		
+	</div>
+</div>
+<script type="text/x-jquery-tmpl" id="appUserFollowsTpl">
+    {{each(i, item) Follows}}
+        <li>
+			<a href="#team/${item.TeamId}">
+				<img src="assets/img/team-logo/${item.TeamLogo}" />
+				<h3>${item.TeamName}</h3>
+			</a>
+			<a href="#user/unfollow/${item.TeamId}" data-rel="popup" data-position-to="window" data-transition="pop">取消关注</a>				
+			</li>
+    {{/each}}
+</script>

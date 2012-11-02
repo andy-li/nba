@@ -1,0 +1,27 @@
+<!-- modules/main/templates/home.html -->
+<div class="homeview-content">
+<div data-role="header" data-position="fixed" data-theme="b">
+    <h1>NBA News</h1>
+</div>
+	
+<div data-role="content">
+	<ul data-role="listview" class="homeview-listview" data-divider-theme="c">
+	</ul>	    
+</div>
+
+<script type="text/x-jquery-tmpl" id="appHomeNewsTpl">
+    {{each(i, teamItem) TeamNews}}
+        <li data-role="list-divider">
+            <a href="#team/${teamItem.TeamId}">${teamItem.TeamName}</a>
+        </li>
+        {{each(j, news) teamItem.News}}
+        <li>
+            <a href="#news/${news.Id}"> 
+                <h4>${news.Title}</h4>
+                <p>来自: ${news.Source}</p> 
+            </a>
+        </li>        
+        {{/each}}
+    {{/each}}
+</script>
+</div>
